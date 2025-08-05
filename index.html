@@ -40,7 +40,7 @@
     }();
 
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('w23k9yb4rith');
+    drift.load('w23k9yb4rith');  // ضع هنا معرف حسابك في Drift
     </script>
     <!-- End of Async Drift Code -->
 </head>
@@ -49,13 +49,16 @@
 
     <script>
     drift.on('ready', function(api) {
-        // لا تستدعي api.show() لأنها غير موجودة في النسخة الجديدة
-        // يمكن هنا تنفيذ أي وظائف تريدها عند جاهزية Drift
-        console.log('Drift جاهز للاستخدام');
+        // فتح نافذة الدردشة بعد تأخير 1 ثانية
+        setTimeout(() => {
+            api.show();
+            console.log('تم فتح نافذة الدردشة تلقائياً');
+        }, 1000);
     });
     </script>
 </body>
 </html>
+
 
 
 
