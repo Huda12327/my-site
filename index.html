@@ -40,7 +40,7 @@
     }();
 
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('w23k9yb4rith');  // ضع هنا معرف حسابك في Drift
+    drift.load('w23k9yb4rith');  // استبدل بـ معرف حسابك في Drift
     </script>
     <!-- End of Async Drift Code -->
 </head>
@@ -48,16 +48,15 @@
     <h1>مرحباً بك في موقعي</h1>
 
     <script>
+    // تأكد أن الدردشة جاهزة ثم افتحها تلقائياً
     drift.on('ready', function(api) {
-        // فتح نافذة الدردشة بعد تأخير 1 ثانية
-        setTimeout(() => {
-            api.show();
-            console.log('تم فتح نافذة الدردشة تلقائياً');
-        }, 1000);
+        api.show();  // تظهر النافذة بدون تأخير
+        console.log('Drift جاهز وتم فتح نافذة الدردشة تلقائياً');
     });
     </script>
 </body>
 </html>
+
 
 
 
